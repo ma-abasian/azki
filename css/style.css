@@ -1,5 +1,683 @@
+/*======================  import ======================*/
 @import "_base.css";
 
+/*======================  main style ======================*/
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 92%;
+}
+
+.row {
+    width: 100%;
+}
+
+/*======================  navbar ======================*/
 .navbar {
-    font-size: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+/*======  toggle button ======*/
+.navbar__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*======  main menu ======*/
+.navbar__main-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo-image {
+    width: 100%;
+}
+
+.menu {
+    margin-right: 40px;
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items__item {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 168%;
+    color: var(--black);
+    margin-right: 24px;
+}
+
+.menu-items__item--icon {
+    vertical-align: middle;
+}
+
+/*======  login button ======*/
+.navbar__login {
+    color: var(--primary-main);
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 168%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+/*======================  header ======================*/
+.header {
+    background: linear-gradient(215.92deg, #FFFFFF 21.89%, #E2F0FD 79%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.header-container {
+    padding-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*======  banner ======*/
+.banner {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.banner__title {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 149%;
+    color: var(--neutral-400);
+    margin-bottom: 24px;
+}
+
+.banner__description {
+    color: var(--black);
+}
+
+.banner__description-subtitle {
+    font-weight: 500;
+    line-height: 154%;
+    margin-bottom: 8px;
+}
+
+.banner__description-caption {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 168%;
+}
+
+/*======  category for types ======*/
+.category {
+    margin-bottom: 32px;
+}
+
+.category__type {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.type__card-container {
+    padding: 4px;
+    width: 33%;
+}
+
+.type__card {
+    background-color: var(--white);
+    border: 1px solid var(--neutral-50);
+    border-radius: 24px;
+    min-height: 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.type__card-tag {
+    background-color: #EBF3E9;
+    color: #3C8825;
+    border-radius: 24px;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 164%;
+    position: absolute;
+    top: -18px;
+    left: 0;
+    padding: 4px 8px;
+}
+
+.type__card-image {
+    display: flex;
+}
+
+.type__card-image img {
+    width: 100%;
+}
+
+.type__card-text {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 149%;
+    color: var(--neutral-400);
+}
+
+/*======  line ======*/
+.category__line {
+    height: 1px;
+    background-color: var(--primary-light);
+    margin: 24px 0;
+}
+
+/*======  category for accidents ======*/
+.category__accident {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.accident__card-container {
+    width: 50%;
+    padding: 4px;
+}
+
+.accident__card {
+    background-color: var(--white);
+    border: 1px solid var(--neutral-50);
+    border-radius: 16px;
+    height: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.accident__card-image {
+    display: flex;
+}
+
+.accident__card-text {
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 168%;
+    color: var(--neutral-400);
+}
+
+/*======  bottom image ======*/
+.header__image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image__headBackground {
+    transform: translateY(1%);
+}
+
+/*======================  content  ======================*/
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*======================  comment  ======================*/
+.comment-container {
+    position: relative;
+    padding: 76px 0 56px 0;
+}
+
+.comment__image {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.comment__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon__link {
+    display: flex;
+}
+
+.comment__extend {
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extend-container {
+    width: 80%;
+    height: 80%;
+    background-color: var(--neutral-50);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__img {
+    display: flex;
+    width: 24px;
+}
+
+.extend__title {
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 164%;
+    color: var(--black);
+    text-align: center;
+}
+
+/*======================  Damage  ======================*/
+.damage {
+    display: flex;
+    justify-content: center;
+    background-color: var(--neutral-25);
+}
+
+.damage-container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.damage__content {
+    margin: 40px 0 60px 0;
+}
+
+/*======  damage banner ======*/
+.damage__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 166%;
+    color: var(--neutral-500);
+}
+
+.damage__description {
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 169%;
+    margin: 16px 0 8px 0;
+    color: var(--neutral-300);
+}
+
+/*======  damage option ======*/
+.damage__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.option__item-container {
+    width: 71%;
+    padding: 8px;
+}
+
+.option__item {
+    background-color: var(--white);
+    border-radius: 32px;
+    padding: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 168%;
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__number {
+    color: var(--secondary-main);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 175%;
+    margin-left: 16px;
+}
+
+/*======  damage button ======*/
+.damage__button-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 40px;
+    padding: 0 24px;
+    background-color: var(--primary-main);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 149%;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.damage__button {
+    justify-content: space-between;
+}
+
+.button__icon {
+    display: flex;
+    margin-right: 8px;
+}
+
+/*======  damage image ======*/
+.damage__image-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+/*======================  responsive ======================*/
+
+/*======  tab ======*/
+@media (min-width: 600px) {
+    .type__card-container {
+        padding: 12px;
+        width: 24%;
+    }
+
+    .type__card {
+        border-radius: 32px;
+        height: 120px;
+    }
+
+    .type__card-image {
+        width: 48px;
+    }
+
+    .accident__card-container {
+        width: 35%;
+        padding: 12px;
+    }
+
+    .comment__image {
+        width: 70%;
+        transform: translateX(20%);
+
+    }
+}
+
+/*======  laptop ======*/
+@media (min-width: 900px) {
+    /*======================  main style ======================*/
+    .container {
+        width: 90%;
+    }
+
+    /*======================  navbar ======================*/
+    .navbar {
+        box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-container {
+        height: 72px;
+    }
+
+    /*======  toggle button ======*/
+    .navbar__toggle {
+        display: none;
+    }
+
+    /*======  main menu ======*/
+    .navbar__logo {
+        width: 92px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    /*======  login button ======*/
+    .navbar__login {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 149%;
+        padding: 8px 16px;
+        border: 1px solid var(--primary-light);
+        border-radius: 24px;
+    }
+
+    /*======================  header ======================*/
+    .header {
+        background: linear-gradient(253.17deg, #FFFFFF 0%, #E2F0FD 101.55%);
+    }
+
+    .header-container {
+        padding-top: 68px;
+    }
+
+    /*======  banner ======*/
+    .banner {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .banner__title {
+        font-size: 2.5rem;
+        line-height: 140%;
+        margin-bottom: 40px;
+    }
+
+    .banner__description-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 12px;
+    }
+
+    .banner__description-caption {
+        font-size: 0.875rem;
+    }
+
+    /*======  category for types ======*/
+    .category {
+        width: 83%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 26px;
+    }
+
+
+
+    .type__card {
+        border-radius: 32px;
+        height: 132px;
+    }
+
+    .type__card-tag {
+        font-size: 0.75rem;
+        line-height: 168%;
+        top: -20px;
+        padding: 4px 8px;
+    }
+
+    .type__card-image {
+        width: 72px;
+    }
+
+    .type__card-text {
+        font-size: 1rem;
+    }
+
+    /*======  category for accidents ======*/
+    .category__accident {
+        width: 100%;
+    }
+
+    .accident__card-container {
+        width: 28%;
+        padding: 12px;
+    }
+
+    .accident__card {
+        height: 68px;
+    }
+
+    .accident__card-text {
+        font-size: 0.875rem;
+    }
+
+    /*======================  comment  ======================*/
+    .comment-container {
+        width: 100%;
+        padding: 36px 32px 120px 32px;
+    }
+
+    .comment__image {
+        width: 50%;
+        transform: translateX(50%);
+        top: 30px;
+    }
+
+    .icon__link {
+        width: 72px;
+    }
+
+    .comment__extend {
+        width: 72px;
+        height: 72px;
+    }
+
+    .extend-container {
+        width: 78%;
+        height: 78%;
+    }
+
+    .icon__img {
+        width: 32px;
+    }
+
+    .extend__title {
+        font-size: 0.75rem;
+        line-height: 168%;
+    }
+
+    /*======================  Damage  ======================*/
+    .damage__content {
+        margin: 48px 0;
+    }
+
+    /*======  damage banner ======*/
+    .damage__title {
+        line-height: 144%;
+    }
+
+    .damage__description {
+        font-size: 1rem;
+        line-height: 149%;
+        margin: 32px 0;
+        width: 88%;
+    }
+
+    /*======  damage option ======*/
+    .option__item-container {
+        width: 33%;
+        padding: 0 0 0 16px;
+    }
+
+    .option__item {
+        font-size: 0.875rem;
+    }
+
+    .item__number {
+        font-size: 1.25rem;
+        line-height: 159%;
+    }
+
+    /*======  damage button ======*/
+    .damage__button-container {
+        margin-top: 40px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    /*======  damage image ======*/
+    .damage__image-container {
+        width: 80%;
+        align-self: flex-end;
+    }
+}
+
+/*======  wide screen ======*/
+@media (min-width: 1200px) {
+    /*======================  main style ======================*/
+    .container {
+        width: 80%;
+    }
+
+    /*======================  header ======================*/
+    /*======  category for types ======*/
+    .type__card-container {
+        width: 17%;
+    }
+
+    .type__card-tag {
+        padding: 8px 16px;
+    }
+
+    /*======================  Damage  ======================*/
+    .damage-container {
+        text-align: right;
+        justify-content: space-between;
+    }
+
+    .damage__content {
+        width: 46%;
+    }
+
+    /*======  damage banner ======*/
+    .damage__description {
+        margin: 16px 0;
+    }
+
+    /*======  damage image ======*/
+    .damage__image-container {
+        width: 45%;
+    }
 }

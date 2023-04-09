@@ -3,14 +3,14 @@
     font-family: "vazir";
     font-style: normal;
     font-weight: 400;
-    src: url("./vazir-font/Vazir-Regular.woff2") format("woff2");
+    src: url("../assets/vazir-font/Vazir-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "vazir";
     font-style: normal;
     font-weight: 500;
-    src: url("./vazir-font/Vazir-Medium.woff2") format("woff2");
+    src: url("../assets/vazir-font/Vazir-Medium.woff2") format("woff2");
 
 }
 
@@ -18,22 +18,22 @@
     font-family: "vazir";
     font-style: normal;
     font-weight: 700;
-    src: url("./vazir-font/Vazir-Bold.woff2") format("woff2");
+    src: url("../assets/vazir-font/Vazir-Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "vazir";
     font-style: normal;
     font-weight: 900;
-    src: url("./vazir-font/Vazir-Black.woff2") format("woff2");
+    src: url("../assets/vazir-font/Vazir-Black.woff2") format("woff2");
 }
 
 /*================  css Reset ================*/
-
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: vazir, sans-serif;
 }
 
 html {
@@ -49,6 +49,12 @@ ul {
     list-style: none;
 }
 
+button{
+    cursor: pointer;
+    border: none;
+}
+
+/*================  root ================*/
 :root {
     --primary-light: #5DA0FB;
     --primary-main: #3E8DF7;
@@ -58,7 +64,7 @@ ul {
     --secondary-dark: #F8B214;
     --white: #FFFFFF;
     --neutral-25: #F9F9F9;
-    --neutral-50: #BDBDBF;
+    --neutral-50: #EAEAEA;
     --neutral-100: #BDBDBF;
     --neutral-200: #9D9D9F;
     --neutral-300: #707174;
