@@ -27,7 +27,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    padding: 22px 20px;
+
 }
 
 /*======  toggle button ======*/
@@ -47,6 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar__logo-image {
@@ -69,10 +71,20 @@
     line-height: 168%;
     color: var(--black);
     margin-right: 24px;
+    cursor: pointer;
 }
 
-.menu-items__item--icon {
+.menu-items__item:hover {
+    color: var(--primary-main);
+}
+
+.icon-bottom-arrow {
     vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+.menu-items__item:hover .icon-bottom-arrow::before {
+    color: var(--primary-main);
 }
 
 /*======  login button ======*/
@@ -85,6 +97,11 @@
     justify-content: center;
     align-items: center;
     padding: 4px;
+    cursor: pointer;
+}
+
+.navbar__login:hover {
+    background-color: rgba(62, 141, 247, 0.1);
 }
 
 /*======================  header ======================*/
@@ -159,6 +176,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
+}
+
+.type__card:hover {
+    border: solid 1px var(--black);
+    box-shadow: 0 0 0 1px #4a4a4a;
 }
 
 .type__card-tag {
@@ -212,10 +235,16 @@
     background-color: var(--white);
     border: 1px solid var(--neutral-50);
     border-radius: 16px;
-    height: 64px;
+    padding: 12px 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
+}
+
+.accident__card:hover {
+    border: solid 1px var(--black);
+    box-shadow: 0 0 0 1px #4a4a4a
 }
 
 .accident__card-image {
@@ -247,61 +276,15 @@
     flex-wrap: wrap;
 }
 
-/*======================  comment  ======================*/
-.comment-container {
-    position: relative;
-    padding: 76px 0 56px 0;
-}
-
-.comment__image {
-    position: absolute;
-    top: 20px;
-    left: 0;
-}
-
-.comment__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.icon__link {
-    display: flex;
-}
-
-.comment__extend {
-    background-color: var(--white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
-    border-radius: 50%;
-    width: 56px;
-    height: 56px;
+/*======================  car bicycle image  ======================*/
+.car-bicycle__container {
+    padding: 16px 0 48px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.extend-container {
-    width: 80%;
-    height: 80%;
-    background-color: var(--neutral-50);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+.car-bicycle__image {
 
-.icon__img {
-    display: flex;
-    width: 24px;
-}
-
-.extend__title {
-    font-size: 0.625rem;
-    font-weight: 500;
-    line-height: 164%;
-    color: var(--black);
-    text-align: center;
 }
 
 /*======================  Damage  ======================*/
@@ -381,8 +364,7 @@
 }
 
 .btn {
-    height: 40px;
-    padding: 0 24px;
+    padding: 10px 24px;
     background-color: var(--primary-main);
     border-radius: 8px;
     font-size: 0.875rem;
@@ -392,6 +374,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
 }
 
 .damage__button {
@@ -408,12 +395,199 @@
     display: flex;
     justify-content: center;
     width: 80%;
+    margin-bottom: -18px;
+}
+
+/*======================  calendar  ======================*/
+.calendar-container {
+    margin: 96px 0 80px 0;
+    position: relative;
+}
+
+.calendar {
+    border-radius: 24px;
+    border: 1px solid var(--black);
+    overflow: hidden;
+}
+
+/*======  calendar head ======*/
+.calendar__head {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 166%;
+    padding: 64px 24px 24px 24px;
+    background-color: var(--secondary-main);
+}
+
+/*======  calendar form ======*/
+.calendar__form {
+    padding: 18px 11px;
+}
+
+.calendar__form-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-item {
+    width: 50%;
+    padding: 6px;
+    position: relative;
+}
+
+.calendar__form-label {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+.calendar__form-item {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--neutral-100);
+    border-radius: 8px;
+    width: 100%;
+    appearance: none;
+    padding: 10px 8px 10px 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 168%;
+    color: var(--neutral-300);
+}
+
+.calendar__form-item:hover {
+    border-color: var(--black);
+}
+
+.form-button {
+    margin-top: 40px;
+}
+
+/*======  calendar icon ======*/
+.calendar-icon__right {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+}
+
+.calendar-icon__left {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+}
+
+/*======================  services  ======================*/
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service__item-container {
+    padding: 8px;
+}
+
+.service__item {
+    display: flex;
+    justify-content: center;
+    color: var(--neutral-500);
+    flex-wrap: wrap;
+    border: 1px solid var(--neutral-200);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 0.625rem;
+    line-height: 164%;
+    font-weight: 500;
+    padding: 26px 31px;
+    text-align: center;
+}
+
+/*======================  about  ======================*/
+.about {
+    text-align: center;
+    background-color: var(--primary-main);
+    color: var(--white);
+    padding: 40px 46px;
+}
+
+.about__title{
+    font-weight: 700;
+    font-size: 1.75rem;
+    line-height: 166%;
+    margin-bottom: 16px;
+}
+
+.about__description {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 169%;
+}
+
+
+/*======================  comment  ======================*/
+.comment__icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.icon__link img:hover {
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .4) !important;
+}
+
+.icon__link {
+    display: flex;
+}
+
+.comment__extend {
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.extend-container {
+    width: 80%;
+    height: 80%;
+    background-color: var(--neutral-50);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__img {
+    display: flex;
+    width: 24px;
+}
+
+.extend__title {
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 164%;
+    color: var(--black);
+    text-align: center;
 }
 
 /*======================  responsive ======================*/
-
 /*======  tab ======*/
 @media (min-width: 600px) {
+    /*======================  header ======================*/
+    /*======  category for types ======*/
     .type__card-container {
         padding: 12px;
         width: 24%;
@@ -421,22 +595,70 @@
 
     .type__card {
         border-radius: 32px;
-        height: 120px;
+        padding: 20px 0;
     }
 
     .type__card-image {
         width: 48px;
     }
 
+    /*======  category for accidents ======*/
     .accident__card-container {
         width: 35%;
         padding: 12px;
     }
 
-    .comment__image {
-        width: 70%;
-        transform: translateX(20%);
+    /*======================  car bicycle image  ======================*/
+    .car-bicycle__image {
+        width: 85%;
+    }
 
+    /*======================  Damage  ======================*/
+    /*======  damage option ======*/
+    .option__item-container {
+        width: 55%;
+    }
+
+    /*======  damage image ======*/
+    .damage__image-container {
+        margin-bottom: -30px;
+    }
+
+    /*======================  calendar  ======================*/
+    .calendar-container {
+        margin: 150px 0 120px 0;
+    }
+
+    /*======  calendar head ======*/
+    .calendar__head {
+        padding: 56px 0 30px 0;
+    }
+
+    /*======  calendar form ======*/
+    .calendar__form {
+        padding: 33px 20px;
+    }
+
+    .form-item {
+        width: 47%;
+        padding: 8px;
+    }
+
+    .calendar__form-label {
+        left: 32px;
+    }
+
+    .calendar__form-item {
+        padding: 16px 14px 16px 0;
+    }
+
+    /*======  calendar icon ======*/
+    .calendar-icon__right {
+        right: 38px;
+    }
+
+    .calendar-icon__left {
+        left: 38px;
     }
 }
 
@@ -455,7 +677,7 @@
     }
 
     .navbar-container {
-        height: 72px;
+        padding: 16px 64px;
     }
 
     /*======  toggle button ======*/
@@ -522,10 +744,9 @@
     }
 
 
-
     .type__card {
         border-radius: 32px;
-        height: 132px;
+        padding: 15px 0;
     }
 
     .type__card-tag {
@@ -554,46 +775,20 @@
     }
 
     .accident__card {
-        height: 68px;
+        padding: 14px 0;
     }
 
     .accident__card-text {
         font-size: 0.875rem;
     }
 
-    /*======================  comment  ======================*/
-    .comment-container {
-        width: 100%;
-        padding: 36px 32px 120px 32px;
+    /*======================  car bicycle image  ======================*/
+    .car-bicycle__container {
+        padding: 32px 0 88px 0;
     }
 
-    .comment__image {
-        width: 50%;
-        transform: translateX(50%);
-        top: 30px;
-    }
-
-    .icon__link {
-        width: 72px;
-    }
-
-    .comment__extend {
-        width: 72px;
-        height: 72px;
-    }
-
-    .extend-container {
-        width: 78%;
-        height: 78%;
-    }
-
-    .icon__img {
-        width: 32px;
-    }
-
-    .extend__title {
-        font-size: 0.75rem;
-        line-height: 168%;
+    .car-bicycle__image {
+        width: 70%;
     }
 
     /*======================  Damage  ======================*/
@@ -641,6 +836,92 @@
     .damage__image-container {
         width: 80%;
         align-self: flex-end;
+        margin-bottom: -45px;
+    }
+
+    /*======================  calendar  ======================*/
+    .calendar-container {
+        margin: 190px 0 160px 0;
+    }
+
+    /*======  calendar head ======*/
+    .calendar__head {
+        padding: 30px 0;
+        font-size: 1.75rem;
+        line-height: 144%;
+    }
+
+    /*======  calendar form ======*/
+    .calendar__form {
+        padding: 48px 40px;
+    }
+
+    .form-item {
+        width: 33%;
+        padding: 12px;
+    }
+
+    .calendar__form-label {
+        left: 24px;
+    }
+
+    .calendar__form-item {
+        padding: 8px 8px 8px 0;
+        font-size: 0.875rem;
+    }
+
+    .form-button {
+        margin-top: 48px;
+    }
+
+    /*======  calendar icon ======*/
+    .calendar-icon__right {
+        right: 56px;
+    }
+
+    .calendar-icon__left {
+        left: 56px;
+    }
+
+    /*======================  services  ======================*/
+    .service__item-container {
+        padding: 24px;
+    }
+
+    .service__item {
+        width: 156px;
+        height: 156px;
+        font-size: 0.75rem;
+        line-height: 168%;
+        padding: 34px 21px;
+    }
+
+    .services__item-image {
+        width: 56px;
+    }
+
+    /*======================  about  ======================*/
+    .about {
+        padding: 48px 0;
+    }
+
+    .about__title{
+        line-height: 144%;
+    }
+
+    .about__description {
+        font-size: 1rem;
+        line-height: 149%;
+    }
+
+    /*======================  comment  ======================*/
+    .comment__icon {
+        width: 72px;
+    }
+
+    .comment__extend {
+        width: 72px;
+        height: 72px;
     }
 }
 
@@ -649,6 +930,11 @@
     /*======================  main style ======================*/
     .container {
         width: 80%;
+    }
+
+    /*======================  navbar ======================*/
+    .navbar-container {
+        padding: 16px 144px;
     }
 
     /*======================  header ======================*/
@@ -679,5 +965,11 @@
     /*======  damage image ======*/
     .damage__image-container {
         width: 45%;
+        margin-bottom: -30px;
+    }
+
+    /*======================  calendar  ======================*/
+    .calendar-container {
+        margin: 190px 240px 160px 240px;
     }
 }

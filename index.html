@@ -13,7 +13,7 @@
 
     <!--  navbar-->
     <div class="navbar row">
-        <div class="navbar-container container">
+        <div class="navbar-container row">
             <!--toggle button-->
             <div class="navbar__toggle"><img src="assets/img/menu-toggle.svg" alt="menu-toggle"></div>
             <!--main menu-->
@@ -26,11 +26,11 @@
                     <ul class="menu-items">
                         <li class="menu-items__item">
                             بیمه‌ها
-                            <img class="menu-items__item--icon" src="assets/img/bottom-arrow.svg" alt="bottom-arrow">
+                            <i class="icon-bottom-arrow"></i>
                         </li>
                         <li class="menu-items__item">
                             خسارت آنلاین
-                            <img class="menu-items__item--icon" src="assets/img/bottom-arrow.svg" alt="bottom-arrow">
+                            <i class="icon-bottom-arrow"></i>
                         </li>
                         <li class="menu-items__item">شرکت‌های بیمه</li>
                         <li class="menu-items__item">فروشنده شوید!</li>
@@ -173,39 +173,24 @@
     <!--content-->
     <div class="content row">
 
-        <!--comment-->
-        <div class="comment-container container">
-            <div class="comment__image row">
+        <!--car bicycle image-->
+        <div class="car-bicycle__container container">
+            <div class="car-bicycle__image row">
                 <img class="comment__image-bicycleCar row" src="assets/img/bicycle-car.svg" alt="bicycle-car">
-            </div>
-            <div class="comment__content">
-                <div class="comment__icon">
-                    <a href="#" class="icon__link">
-                        <img class="row" src="assets/img/comment.svg" alt="comment">
-                    </a>
-                </div>
-                <div class="comment__extend">
-                    <div class="extend-container">
-                        <a class="comment__link" href="#">
-                            <div class="extend__icon"><img class="icon__img" src="assets/img/car.svg" alt="car"></div>
-                            <div class="extend__title">تمدید</div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
 
         <!--damage-->
         <div class="damage row">
             <div class="damage-container container">
-
                 <div class="damage__content">
 
                     <!--damage-banner-->
                     <div class="damage__banner">
                         <h2 class="damage__title">پرداخت خسارت آنلاین</h2>
                         <p class="damage__description">
-                            خسارت ماشین خود را آنلاین و فقط در سه مرحله دریافت کنید. بدون دردسر و پرداخت هزینه اضافه، خسارت خود را از ازکی بگیرید. پشتیبانی ۲۴ ساعته ازکی در تمام مراحل در کنار شماست.
+                            خسارت ماشین خود را آنلاین و فقط در سه مرحله دریافت کنید. بدون دردسر و پرداخت هزینه اضافه،
+                            خسارت خود را از ازکی بگیرید. پشتیبانی ۲۴ ساعته ازکی در تمام مراحل در کنار شماست.
                         </p>
                     </div>
 
@@ -252,7 +237,304 @@
                 </div>
             </div>
         </div>
+
+        <!--calendar-->
+        <div class="calendar-container container">
+            <div class="calendar">
+
+                <!--calendar head-->
+                <div class="calendar__head">یادآور تمدید اقساط یا بیمه</div>
+
+                <!--calendar form-->
+                <div class="calendar__form">
+                    <form class="calendar__form-body">
+                        <div class="form-item">
+                            <label class="calendar__form-label" for="remember"><img src="./assets/img/form-arrow.svg"
+                                                                                    alt="select-arrow"></label>
+                            <select class="calendar__form-item" name="remember" id="remember">
+                                <option value="" selected>یادآور برای بیمه</option>
+                                <option value="">تست</option>
+                                <option value="">تصغصغصیئئضتهضسغ</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label class="calendar__form-label" for="repeat">
+                                <img src="./assets/img/form-arrow.svg" alt="select-arrow">
+                            </label>
+                            <select class="calendar__form-item" name="repeat" id="repeat">
+                                <option value="" selected>نحوه تکرار</option>
+                                <option value="">تست</option>
+                                <option value="">تصغصغصیئئضتهضسغ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <input class="calendar__form-item" type="text" id="remember-explain"
+                                   placeholder="توضیحات یادآوری">
+                        </div>
+
+                        <div class="form-item">
+                            <input class="calendar__form-item" type="text" id="expire-date" placeholder="تاریخ سررسید">
+                        </div>
+
+                        <div class="form-item">
+                            <label class="calendar__form-label" for="united"><img src="./assets/img/form-arrow.svg"
+                                                                                  alt="select-arrow"></label>
+                            <select class="calendar__form-item" name="united" id="united">
+                                <option value="" selected>استان</option>
+                                <option value="">تست</option>
+                                <option value="">تصغصغصیئئضتهضسغ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-item">
+                            <label class="calendar__form-label" for="city"><img src="./assets/img/form-arrow.svg"
+                                                                                alt="select-arrow"></label>
+                            <select class="calendar__form-item" name="city" id="city">
+                                <option value="" selected>شهر</option>
+                                <option value="">تست</option>
+                                <option value="">تصغصغصیئئضتهضسغ</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="form-button btn">ثبت یادآور</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="calendar-icon">
+                <img class="calendar-icon__right" src="./assets/img/calendar.svg" alt="calendar">
+                <img class="calendar-icon__left" src="./assets/img/calendar.svg" alt="calendar">
+            </div>
+        </div>
+
+        <!--serveices-->
+        <div class="services container">
+            <div class="service__item-container">
+                <div class="service__item">
+                    <div class="services__item-image">
+                        <img class="row" src="./assets/img/umbrella.png" alt="umbrella">
+                    </div>
+                    <div class="services__item-title">مقایسه قیمت
+                        و شرایط
+                    </div>
+                </div>
+            </div>
+
+            <div class="service__item-container">
+                <div class="service__item">
+                    <div class="services__item-image">
+                        <img class="row" src="./assets/img/clock.png" alt="clock">
+                    </div>
+                    <div class="services__item-title">خرید سریع و آسان</div>
+                </div>
+            </div>
+            <div class="service__item-container">
+                <div class="service__item">
+                    <div class="services__item-image">
+                        <img class="row" src="./assets/img/technical-support.png" alt="technical-support">
+                    </div>
+                    <div class="services__item-title">پشتیبانی
+                        ۲۴ ساعته
+                    </div>
+                </div>
+            </div>
+            <div class="service__item-container">
+                <div class="service__item">
+                    <div class="services__item-image">
+                        <img class="row" src="./assets/img/shipped.png" alt="shipped">
+                    </div>
+                    <div class="services__item-title">ارسال به
+                        سراسر ایران
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer row">
+            <!--about-->
+            <div class="about">
+                <div class="about__title">
+                    ازکی چیست؟
+                </div>
+                <div class="about__description">
+                    ازکی شرکت بیمه نیست. با ازکی آنلاین شرکت‌های بیمه رو باهم مقایسه کنید و با خیال راحت بیمه بخرید.
+                </div>
+            </div>
+
+            <!--footer content-->
+            <div class="footer__content row">
+
+                <!--footer insurances-->
+                <div class="footer__insurances">
+                    <div class="footer__insurances-title">بیمه‌ها</div>
+                    <ul class="footer__insurances-items">
+                        <li class="footer__insurances-item">
+                            بیمه شخص ثالث
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه بدنه
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه آتش سوزی
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه زلزله
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه مسافرتی
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه عمر
+                        </li>
+                        <li class="footer__insurances-item">
+
+                            بیمه مسئولیت پزشکان
+                        </li>
+                        <li class="footer__insurances-item">
+
+                            بیمه موتورسیکلت
+                        </li>
+                        <li class="footer__insurances-item">
+
+                            بیمه درمان تکمیلی
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه آسانسور
+                        </li>
+                        <li class="footer__insurances-item">
+                            بیمه حوادث انفرادی
+                        </li>
+                    </ul>
+                </div>
+
+                <!--footer quickAccess-->
+                <div class="footer__quickAccess">
+                    <div class="footer__quickAccess-title">دسترسی سریع</div>
+                    <ul class="footer__quickAccess-items">
+                        <li class="footer__quickAccess-item">
+                            بیمه اقساطی خودرو
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            خسارت آنلاین
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            استعلام پلاک
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            پنل فروشندگان
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            شرایط و قوانین
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            سوالات متداول
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            همکاری با نماینده‌های بیمه
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            تماس با ما
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            درباره ما
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            اتاق خبر ازکی
+                        </li>
+                        <li class="footer__quickAccess-item">
+                            فرصت‌های شغلی
+                        </li>
+                    </ul>
+                </div>
+
+                <!--footer about-->
+                <div class="footer__about">
+                    <div class="footer__about-logo">
+                        <img src="./assets/img/azki-logo.svg" alt="logo">
+                    </div>
+                    <div class="footer__about-content">
+                        <div class="footer__about-description">
+                            ازکی شرکت بیمه نیست؛ با ازکی آنلاین شرکت‌های بیمه رو باهم مقایسه کنید و با خیال راحت بیمه
+                            بخرید. به کمک ازکی می‌تونید قبل از خرید درباره انواع مختلف بیمه، پوشش‌ها و قیمت‌هاشون
+                            اطلاعات دقیق و کامل کسب کنید.
+                        </div>
+                        <div class="footer__about-connection">
+                            <div class="footer__about-address">
+                                <i><img src="./assets/img/location.svg" alt="location"></i>
+                                <p>خیابان ولیعصر، بالاتر از پارک ساعی، بن‌بست یاس، پلاک ۱</p>
+                            </div>
+
+                            <div class="footer__about-phone">
+                                <i><img src="./assets/img/phone.svg" alt="phone"></i>
+                                <p>
+                                    <span>تلفن:</span>
+                                    <span>۰۲۱-۹۱۰۲۰۳۴۵</span>
+                                </p>
+                            </div>
+                            <div class="footer__about-email">
+                                <i><img src="./assets/img/email.svg" alt="email"></i>
+                                <p>
+                                    <span>ایمیل:</span>
+                                    <span>info@Azki.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer logos-->
+                <div class="footer__logos">
+                    <div class="footer__logos-image">
+                        <img src="./assets/img/new-enamad.png" alt="enamad">
+                    </div>
+                    <div class="footer__logos-image">
+                        <img src="./assets/img/samandehi.png" alt="samandehi">
+                    </div>
+                    <div class="footer__logos-image">
+                        <img src="./assets/img/markazi.png" alt="bimeh markazi">
+                    </div>
+                </div>
+            </div>
+
+            <!--footer copyRight-->
+            <div class="footer__copyRight">
+                <div class="footer__copyRight-description">کلیه حقوق این وب سایت محفوظ و متعلق به شرکت ازکی می‌باشد.</div>
+
+                <div class="footer__copyRight-socialMedia">
+                    <div class="footer__copyRight-image">
+                        <img src="./assets/img/instagram.svg" alt="instagram">
+                    </div>
+                    <div class="footer__copyRight-image">
+                        <img src="./assets/img/telegram.svg" alt="telegram">
+                    </div>
+                    <div class="footer__copyRight-image">
+                        <img src="./assets/img/twitter.svg" alt="twitter">
+                    </div>
+                    <div class="footer__copyRight-image">
+                        <img src="./assets/img/linkdin.svg" alt="linkdin">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<!--comment-->
+<div class="comment">
+    <div class="comment__icon">
+        <a href="#" class="icon__link">
+            <img class="row" src="assets/img/comment.svg" alt="comment">
+        </a>
+    </div>
+    <a class="comment__link" href="#">
+        <div class="comment__extend">
+            <div class="extend-container">
+                <div class="extend__icon"><img class="icon__img" src="assets/img/car.svg" alt="car"></div>
+                <div class="extend__title">تمدید</div>
+            </div>
+        </div>
+    </a>
+</div>
+
 </body>
 </html>
