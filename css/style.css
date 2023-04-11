@@ -16,6 +16,18 @@
     width: 100%;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
+.--pointer {
+    cursor: pointer;
+}
+
+.--hover:hover{
+    color: var(--primary-main);
+}
+
 /*======================  navbar ======================*/
 .navbar {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -507,7 +519,14 @@
     text-align: center;
 }
 
-/*======================  about  ======================*/
+/*======================  footer  ======================*/
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*======  about  ======*/
 .about {
     text-align: center;
     background-color: var(--primary-main);
@@ -515,7 +534,7 @@
     padding: 40px 46px;
 }
 
-.about__title{
+.about__title {
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 166%;
@@ -528,6 +547,112 @@
     line-height: 169%;
 }
 
+/*=============  footer content  =============*/
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 168%;
+    color: var(--neutral-500);
+    padding: 32px 24px;
+    background: linear-gradient(180.22deg, #F9F4E7 0.2%, #E6F6F9 99.83%);
+}
+
+.footer__title {
+    color: var(--primary-main);
+    margin-bottom: 8px;
+}
+
+.footer__insurances-item:hover, .footer__quickAccess-item:hover {
+    color: var(--primary-main);
+    cursor: pointer;
+}
+
+/*======  insurances  ======*/
+.footer__insurances {
+    width: 50%;
+}
+
+/*======  quickAccess  ======*/
+.footer__quickAccess {
+    width: 50%;
+}
+
+/*======  footer about  ======*/
+.footer__about {
+    margin-top: 40px;
+}
+
+.footer__connection-item {
+    margin-top: 16px;
+}
+
+.footer__connection-icon img {
+    vertical-align: bottom;
+    margin-left: 12px;
+}
+
+/*======  footer logos  ======*/
+.footer__logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 16px;
+}
+
+.footer__logos-image {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 80px;
+    height: 80px;
+}
+
+/*======  footer copyRight  ======*/
+.footer__copyRight {
+    background: linear-gradient(90deg, #2151CC -2.05%, #739FF2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px 77px;
+}
+
+.footer__copyRight-description {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 168%;
+    margin-bottom: 16px;
+}
+
+.footer__copyRight-socialMedia {
+    display: flex;
+    align-items: center;
+}
+
+.footer__copyRight-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 6px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.footer__copyRight-image img {
+    display: flex;
+}
 
 /*======================  comment  ======================*/
 .comment__icon {
@@ -659,6 +784,18 @@
 
     .calendar-icon__left {
         left: 38px;
+    }
+
+    /*======================  footer  ======================*/
+    /*=============  footer content  =============*/
+    /*======  footer about  ======*/
+    .footer__about {
+        width: 50%;
+    }
+
+    /*======  footer logos  ======*/
+    .footer__logos {
+        width: 50%;
     }
 }
 
@@ -900,18 +1037,58 @@
         width: 56px;
     }
 
-    /*======================  about  ======================*/
+    /*======================  footer  ======================*/
+    /*======  about  ======*/
     .about {
         padding: 48px 0;
     }
 
-    .about__title{
+    .about__title {
         line-height: 144%;
     }
 
     .about__description {
         font-size: 1rem;
         line-height: 149%;
+    }
+
+    /*=============  footer content  =============*/
+    .footer__content {
+        font-size: 0.875rem;
+        justify-content: space-evenly;
+    }
+
+    /*======  insurances  ======*/
+    .footer__insurances {
+        width: 13%;
+    }
+
+    /*======  quickAccess  ======*/
+    .footer__quickAccess {
+        width: 13%;
+    }
+
+    /*======  footer about  ======*/
+    .footer__about {
+        width: 29%;
+        margin: 0;
+        order: -1;
+    }
+
+    /*======  footer logos  ======*/
+    .footer__logos {
+        width: 30%;
+    }
+
+    /*======  footer copyRight  ======*/
+    .footer__copyRight {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 22px 144px;
+    }
+
+    .footer__copyRight-description {
+        margin: 0;
     }
 
     /*======================  comment  ======================*/
@@ -971,5 +1148,12 @@
     /*======================  calendar  ======================*/
     .calendar-container {
         margin: 190px 240px 160px 240px;
+    }
+
+    /*======================  footer  ======================*/
+    /*=============  footer content  =============*/
+    /*======  footer logos  ======*/
+    .footer__logos {
+        width: 25%;
     }
 }
