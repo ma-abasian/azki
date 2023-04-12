@@ -24,7 +24,7 @@
     cursor: pointer;
 }
 
-.--hover:hover{
+.--hover:hover {
     color: var(--primary-main);
 }
 
@@ -517,6 +517,117 @@
     font-weight: 500;
     padding: 26px 31px;
     text-align: center;
+}
+
+/*======================  slider  ======================*/
+.slider-container {
+    padding: 147px 16px 152px;
+}
+
+.slider__cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.slider__card-container {
+    padding: 0 12px;
+}
+
+.slider__card {
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.11);
+    padding: 24px 48px;
+}
+
+.slider__card:hover {
+    border: solid 1px var(--black);
+    box-shadow: 0 0 0 1px #4a4a4a;
+}
+
+.slider__image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.slider__image {
+    display: flex;
+    margin-top: -67px;
+}
+
+.slider__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slider__content-title {
+    padding: 12px 0 8px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 175%;
+}
+
+.slider__content-description {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 169%;
+    color: var(--neutral-400);
+    text-align: justify;
+}
+
+.slider__button {
+    padding: 6px 24px;
+    margin-top: 32px;
+}
+
+.--dis {
+    display: none;
+}
+
+/*=========  slider arrow  =========*/
+.slider__arrows {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.slider__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+}
+
+.slider__arrow:hover {
+  background-color: var(--neutral-50);
+}
+
+.--right {
+    transform: rotate(180deg);
+}
+
+.slider__dots {
+    display: flex;
+    align-items: center;
+}
+
+.slider__dot {
+    margin: 0 2px;
+    padding: 0 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--neutral-50);
+}
+
+.slider__dot--active {
+    background-color: var(--primary-main);
 }
 
 /*======================  footer  ======================*/
@@ -1148,6 +1259,15 @@
     /*======================  calendar  ======================*/
     .calendar-container {
         margin: 190px 240px 160px 240px;
+    }
+
+    /*======================  slider  ======================*/
+    .slider__card {
+        padding: 24px 34px;
+    }
+
+    .--dis {
+        display: block;
     }
 
     /*======================  footer  ======================*/
