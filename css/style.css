@@ -522,22 +522,27 @@
 /*======================  slider  ======================*/
 .slider-container {
     padding: 147px 16px 152px;
+    overflow: hidden;
 }
 
 .slider__cards {
+    transition: 2s;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
+
 }
 
 .slider__card-container {
     padding: 0 12px;
+    min-width: 295px;
 }
 
 .slider__card {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.11);
     padding: 24px 48px;
+    border: solid 1px var(--white);
 }
 
 .slider__card:hover {
