@@ -1,11 +1,13 @@
 let sliderCards = document.querySelector(".slider__cards");
-let cardWidth = 295;
+let sliderCard = document.querySelector(".slider__card-container");
+let sliderCardWidth = sliderCard.clientWidth;
 let counter = 0;
 let sliderLength = sliderCards.children.length;
-let max = cardWidth * (sliderLength - 1);
+let max = sliderCardWidth * (sliderLength - 1);
+
 document.querySelector(".--right").addEventListener("click", () => {
     counter++;
-    let transWidth = counter * cardWidth;
+    let transWidth = counter * sliderCardWidth;
     if (counter === sliderLength) {
         transWidth = 0;
         counter = 0;
@@ -18,7 +20,7 @@ document.querySelector(".--right").addEventListener("click", () => {
 
 document.querySelector(".--left").addEventListener("click", () => {
     counter--;
-    let transWidth = counter * cardWidth;
+    let transWidth = counter * sliderCardWidth;
     if (counter === -1) {
         transWidth = max;
         console.log(transWidth)
@@ -28,6 +30,4 @@ document.querySelector(".--left").addEventListener("click", () => {
         console.log(transWidth)
         sliderCards.style.transform = `translateX(${transWidth}px)`;
     }
-
-
 });

@@ -535,7 +535,7 @@
 
 .slider__card-container {
     padding: 0 12px;
-    min-width: 295px;
+    min-width: 100%;
 }
 
 .slider__card {
@@ -586,9 +586,6 @@
     margin-top: 32px;
 }
 
-.--dis {
-    display: none;
-}
 
 /*=========  slider arrow  =========*/
 .slider__arrows {
@@ -1153,6 +1150,12 @@
         width: 56px;
     }
 
+    /*======================  slider  ======================*/
+    .slider__card-container {
+        padding: 0 12px;
+        min-width: 40%;
+    }
+
     /*======================  footer  ======================*/
     /*======  about  ======*/
     .about {
@@ -1267,12 +1270,14 @@
     }
 
     /*======================  slider  ======================*/
-    .slider__card {
-        padding: 24px 34px;
+    /*======================  slider  ======================*/
+    .slider__card-container {
+        padding: 0 12px;
+        min-width: 25%;
     }
 
-    .--dis {
-        display: block;
+    .slider__card {
+        padding: 24px 34px;
     }
 
     /*======================  footer  ======================*/
